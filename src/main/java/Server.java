@@ -21,7 +21,7 @@ public class Server {
                 thread.start();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Can't start server", e);
         }
     }
 

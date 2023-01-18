@@ -78,7 +78,7 @@ public class ClientHandler implements Runnable {
                 socket.close();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Can't close all resources", e);
         }
     }
 }

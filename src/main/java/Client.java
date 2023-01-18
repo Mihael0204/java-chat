@@ -74,7 +74,7 @@ public class Client {
                 socket.close();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Can't close all resources", e);
         }
     }
 
